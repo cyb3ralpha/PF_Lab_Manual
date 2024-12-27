@@ -5,16 +5,6 @@ This project is an interactive C++ lab manual designed for educational purposes.
 - Colorful and engaging output.
 - Easy navigation between menus.
 
----
-
-## 💻 Try It Online
-
-You can run this project directly in your browser without downloading anything. Just click the link below:
-
-👉 [Run Interactive Lab Manual on Replit](https://replit.com/@ab321252/PFLabManual#main.cpp)
-
----
-
 ## 📜 Features
 - **Interactive Menu**: Select topics and programs from a central menu.
 - **Colorful Output**: Enhanced visual experience with colors.
