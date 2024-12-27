@@ -1,4 +1,4 @@
-# Interactive Lab Manual
+# Interactive PF Lab Manual
 
 This project is an interactive C++ lab manual designed for educational purposes. It features a menu-driven interface, colorful output, and an organized structure for running various lab programs.
 
@@ -10,4 +10,4 @@ This project is an interactive C++ lab manual designed for educational purposes.
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/Interactive-Lab-Manual.git
+   https://github.com/cyb3ralpha/PF_Lab_Manual.git
