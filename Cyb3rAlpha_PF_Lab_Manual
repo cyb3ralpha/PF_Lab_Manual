@@ -1,0 +1,654 @@
+#include <iostream>
+#include<string>
+
+using namespace std;
+
+// Function prototypes
+void disMenu();
+void disTopic(int topic);
+void runProgram(int topic, int program);
+
+// Individual program functions
+void topic1_program1(); //Lab Manual No 1
+void topic1_program2();
+void topic1_program3();
+void topic1_program4();
+void topic1_program5();
+void topic1_program6();
+void topic2_program1(); //Lab Manual No 2a
+void topic2_program2();
+void topic2_program3();
+void topic2_program4();
+void topic2_program5();
+void topic2_program6();
+void topic3_program1(); //Lab Manual No 3 
+void topic4_program1(); //Lab Manual No 4
+void topic4_program2();
+void topic4_program3();
+void topic4_program4();
+void topic5_program1(); //Lab Manual No 5
+void topic5_program2();
+void topic6_program1(); //Lab Manual No 6
+void topic6_program2();
+void topic7_program1(); //Lab Manual No 7
+void topic7_program2();
+void topic8_program1(); //Lab Manual No 8
+void topic8_program2();
+void topic9_program1(); //Lab Manual No 9
+void topic9_program2();
+void topic10_program1(); //Lab Manual No 10
+void topic10_program2();
+void topic11_program1(); //Lab Manual No 11
+void topic11_program2();
+
+
+// ANSI color codes
+const string RESET = "\033[0m";
+const string RED = "\033[31m";
+const string GREEN = "\033[32m";
+const string YELLOW = "\033[33m";
+const string BLUE = "\033[34m";
+const string CYAN = "\033[36m";
+const string MAGENTA = "\033[35m";
+
+int main() {
+    int Choice = 0;
+    while (Choice != 99) {
+        disMenu();
+        cin >> Choice;
+
+        if (Choice == 99) {
+            cout << GREEN << "Exiting the lab manual. Goodbye!" << RESET << endl;
+            break;
+        }
+
+        // Beep sound
+        cout << "\a";
+        disTopic(Choice);
+    }
+
+    return 0;
+}
+
+// Function to display the main menu
+void disMenu() {
+    cout << CYAN << "\t\t\t\t\t\t Welcome to the Lab Manual" << RESET << endl;
+    cout << GREEN << "\t\t\t\t\t\t Name: Abdullah Ismail" << RESET << endl;
+    cout << BLUE << "\t\t\t\t\t\t Roll No: F23-0260" << RESET << endl;
+	cout << GREEN << "\t\t\t\t\t\t Name: Kashan Sajjad Awan" << RESET << endl;
+    cout << BLUE << "\t\t\t\t\t\t Roll No: F23-1555" << RESET << endl;
+    cout << YELLOW << "\t\t\t\t\t\t Section: 'B'" << RESET << endl;
+    cout << BLUE << "\t\t\t\t\t\t Program: Artifical Intelligence " << RESET << endl;
+    cout << YELLOW << "\t\t\t\t\t\t Department: Information Technology" << RESET << endl;
+    cout << GREEN << "\t\t\t\t\t\t Teacher: Mam Javeria Naz" << RESET << endl;
+    cout << GREEN << "Select a Lab Maunal: " << RESET << endl;
+    cout << MAGENTA <<"1. Lab Manual 1" << endl;
+    cout << CYAN << "2. Lab Manual 2" << endl;
+    cout << MAGENTA <<"3. Lab Manual 3" << endl;
+    cout << CYAN << "4. Lab Manual 4" << endl;
+    cout << MAGENTA <<"5. Lab Manual 5" << endl;
+    cout << CYAN << "6. Lab Manual 6" << endl;
+    cout << MAGENTA <<"7. Lab Manual 7" << endl;
+    cout << CYAN << "8. Lab Manual 8" << endl;
+    cout << MAGENTA <<"9. Lab Manual 9" << endl;
+    cout << CYAN << "10. Lab Manual 10" << endl;
+    cout << CYAN << "11. Lab Manual 11" << endl;
+    cout << RED << "99. Exit" << endl;
+    cout << GREEN <<"Enter your choice: ";
+}
+
+// Function to display programs under a topic
+void disTopic(int topic) {
+    int programChoice = 0;
+
+    while (programChoice != 99) {
+        cout << MAGENTA << "Programs under Topic " << topic << RESET << endl;
+
+        if (topic == 1) {
+            cout << MAGENTA<<"1. Program 1:" << endl;
+            cout << CYAN <<"2. Program 2: Example of Assignment Operator" << endl;
+            cout << MAGENTA<<"3. Program 3: Write a program in C++ that display Following Output" << endl;
+            cout << CYAN <<"4. Program 4: Write a program in C++ which print the Follwing Output" << endl;
+            cout << MAGENTA<<"5. Program 5: Program Whcih take radius from the User and and calculate the area of Sphere" << endl;
+            cout << CYAN <<"6. Program 6: Find the Num of byte accoupied by datatypes using sizeof operator" << endl;
+        } else if (topic == 2) {
+            cout << MAGENTA<< "1. Program 1: Find the largest number among three of them" << endl;
+            cout << CYAN << "2. Program 2: Find the grades of students" << endl;
+            cout << MAGENTA<< "3. Program 3: Input a single character. It\'s vowel or consonant " << endl;
+            cout << CYAN << "4. Program 4: Take Integer value and tell it\'s even or odd" << endl;
+            cout << MAGENTA<< "5. Program 5: It\'s Capital or Small Letter" << endl;
+            cout << CYAN << "6. Program 6: Form of water according to Temperature" << endl;
+        } else if (topic == 3) {
+            cout << MAGENTA<< "1. Program 1: Write a program in C++ using switch statement that contain option as under \n Enter 1--> To Find Largest Number Among Three Variables. \n Enter 2--> To Find ODD or EVEN \n Enter 3--> To Find Condition of Water \n Enter 4--> To Find Grade Of Student " << endl;
+        } else if (topic == 4) {
+            cout << MAGENTA<< "1. Program 1: " << endl;
+            cout << CYAN << "2. Program 2: " << endl;
+            cout << MAGENTA<< "3. Program 3: " << endl;
+            cout << CYAN << "4. Program 4:  "<< endl;
+        } else if (topic == 5) {
+            cout << MAGENTA<< "1. Program 1: " << endl;
+            cout << CYAN << "2. Program 2: " << endl;
+        } else if (topic == 6) {
+            cout << MAGENTA<< "1. Program 1: " << endl;
+            cout << CYAN << "2. Program 2: " << endl;
+        } else if (topic == 7) {
+            cout << MAGENTA<< "1. Program 1: " << endl;
+            cout << CYAN << "2. Program 2: " << endl;
+        } else if (topic == 8) {
+            cout << MAGENTA<< "1. Program 1: " << endl;
+            cout << CYAN << "2. Program 2: " << endl;
+        } else if (topic == 9) {
+            cout << MAGENTA<< "1. Program 1: " << endl;
+            cout << CYAN << "2. Program 2: " << endl;
+        } else if (topic == 10) {
+            cout << MAGENTA<< "1. Program 1: " << endl;
+            cout << CYAN << "2. Program 2: " << endl;
+        } else if (topic == 11) {
+            cout << MAGENTA<< "1. Program 1: " << endl;
+            cout << CYAN << "2. Program 2: " << endl;
+        }
+
+
+        cout << RED<<"99. Go back" << endl;
+        cout << GREEN<<"Enter your choice: ";
+        cin >> programChoice;
+
+        if (programChoice != 99) {
+            // Beep sound
+            cout << "\a";
+            runProgram(topic, programChoice);
+        }
+    }
+}
+
+// Function to simulate running a program
+void runProgram(int topic, int program) {
+    if (topic == 1) {
+        if (program == 1) {
+            topic1_program1();
+        } else if (program == 2) {
+            topic1_program2();
+        } else if (program == 3) {
+            topic1_program3();
+        } else if (program == 4) {
+            topic1_program4();
+        } else if (program == 5) {
+            topic1_program5();
+        } else if (program == 6) {
+            topic1_program6();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    } else if (topic == 2) {
+        if (program == 1) {
+            topic2_program1();
+        } else if (program == 2) {
+            topic2_program2();
+        } else if (program == 3) {
+            topic2_program3();
+        } else if (program == 4) {
+            topic2_program4();
+        } else if (program == 5) {
+            topic2_program5();
+        } else if (program == 6) {
+            topic2_program6();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 3) {
+        if (program == 1) {
+            topic3_program1();
+		} else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 4) {
+        if (program == 1) {
+            topic4_program1();
+        } else if (program == 2) {
+            topic4_program2();
+        } else if (program == 3) {
+            topic4_program3();
+        } else if (program == 4) {
+            topic4_program4();
+		} else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 5) {
+        if (program == 1) {
+            topic5_program1();
+        } else if (program == 2) {
+            topic5_program2();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 6) {
+        if (program == 1) {
+            topic6_program1();
+        } else if (program == 2) {
+            topic6_program2();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 7) {
+        if (program == 1) {
+            topic7_program1();
+        } else if (program == 2) {
+            topic7_program2();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 8) {
+        if (program == 1) {
+            topic8_program1();
+        } else if (program == 2) {
+            topic8_program2();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 9) {
+        if (program == 1) {
+            topic9_program1();
+        } else if (program == 2) {
+            topic9_program2();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 10) {
+        if (program == 1) {
+            topic10_program1();
+        } else if (program == 2) {
+            topic10_program2();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    }else if (topic == 11) {
+        if (program == 1) {
+            topic11_program1();
+        } else if (program == 2) {
+            topic11_program2();
+        } else {
+            cout << RED << "Invalid program choice!" << RESET << endl;
+        }
+    } else {
+        cout << RED << "Invalid topic choice!" << RESET << endl;
+    }
+}
+
+// Program functions for Topic 1
+void topic1_program1() {
+    cout<<" Welcome to Programming Fundamental"<< endl;  
+}
+
+void topic1_program2() {
+int a, b;  
+a = 10;  
+b = 4;  
+a = b;  
+b = 7; 
+cout << "a :"; cout << a <<endl ;  
+cout << "\n b :"; cout << b <<endl;   
+}
+
+void topic1_program3() {
+  for (int i = 0; i < 10; i++)  
+{ 
+        cout << "*****\t \t  \t*****" << endl; 
+    } 
+    cout << endl;  
+    cout << "*****\t \t   \t*****" << endl << endl; 
+    for (int i = 0; i < 3; i++)  
+{ 
+        cout << "###############################" << endl; 
+    } 
+}
+
+void topic1_program4() {
+    cout << "$*********************************************$\n$*********************************************$" << endl; 
+    cout << "$*Welcome to                                *$" << endl; 
+    cout << "$*                                           *$" << endl; 
+    cout << "$*University od Haripur                     *$" << endl; 
+    cout << "$*                                           *$" << endl; 
+    cout << "$*Haripur                                *$" << endl << endl; 
+    cout << "$**********************************************$\n$**********************************************$" << endl; 
+}
+
+void topic1_program5() {
+  	double radius, area; 
+    const double pi = 3.1416; 
+    cout << "Enter the radius of the sphere: "; 
+    cin >> radius; 
+    area = 4 * pi * radius * radius; 
+    cout << "The surface area of the sphere is: " << area << endl; 
+}
+
+void topic1_program6() {
+    int a;
+    char b;
+    float c;
+    long int d;
+    bool e;
+    unsigned int j;
+    unsigned long k;
+    cout << "Size of int: " << sizeof(a) << " bytes" << endl;
+    cout << "Size of char: " << sizeof(b) << " byte" << endl;
+    cout << "Size of float: " << sizeof(c) << " bytes" << endl;
+    cout << "Size of long int: " << sizeof(d) << " bytes" << endl;
+    cout << "Size of bool: " << sizeof(e) << " byte" << endl;
+    cout << "Size of unsigned int: " << sizeof(j) << " bytes" << endl;
+    cout << "Size of unsigned long: " << sizeof(k) << " bytes" << endl;
+
+}
+
+// Program functions for Topic 2
+void topic2_program1() {
+int a,b,c; 
+cout<<"Enter first number"; 
+cin>>a; 
+cout<<"Enter second number"; 
+cin>>b; 
+cout<<"Enter third number"; 
+cin>>c; 
+    if (a>b)  
+{ 
+cout<<a<<"is greater"; 
+    } 
+    else if (b>c) 
+{ 
+cout<<b<<"is greater"; 
+    } 
+    else 
+    { 
+    	cout<<c<<"is greater"; 
+} 
+}
+
+void topic2_program2() {
+int marks;  
+cout<<"Enter Obtain Marks";  
+cin>>marks;  
+if (marks>=90)   
+{  
+cout<<"Congragulations you have A Grade";  
+}  
+    else if (marks>=80)  
+{  
+cout<<"Grade B";  
+}
+else if(marks>=70) 
+{  
+cout<<"Grade C";  
+}  
+else if (marks>=60) 
+{ 
+cout<<"Grade D"; 
+} 
+else 
+{ 
+cout<<"Sorry you are failed"; 
+} 
+}
+
+void topic2_program3() {
+    char ch; 
+    cout << "Enter a single character: "; 
+    cin >> ch; 
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || 
+        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') { 
+        cout << "It is a vowel." << endl; 
+    } else { 
+        cout << "It is a consonant." << endl; 
+    } 
+}
+
+void topic2_program4() {
+int num; 
+    cout << "Enter an integer: "; 
+    cin >> num; 
+    if (num % 2 == 0) { 
+        cout << "The number " << num << " is EVEN." << endl; 
+    } else { 
+        cout << "The number " << num << " is ODD." << endl; 
+    } 
+}
+
+void topic2_program5() {
+  char ch; 
+    cout << "Enter a single character: "; 
+    cin >> ch; 
+    if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))  
+{ 
+        if (ch >= 'a' && ch <= 'z') { 
+            cout << "It is a SMALL letter." << endl; 
+        } else { 
+            cout << "It is a CAPITAL letter." << endl; 
+        } 
+    } else { 
+        cout << "The entered character is not an alphabet." << endl; 
+    } 
+}
+
+void topic2_program6() {
+  float temp; 
+    cout << "********** Water Form Menu **********" << endl; 
+    cout << "Temperature < 0  = ICE" << endl; 
+    cout << "Temperature 0 - 100 = WATER" << endl; 
+    cout << "Temperature > 100 = STEAM" << endl; 
+    cout << "*************************************" << endl; 
+    cout << "Enter the temperature: "; 
+    cin >> temp; 
+    if (temp < 0) { 
+        cout << "The form of water is ICE." << endl; 
+    } else if (temp > 0 && temp < 100) { 
+        cout << "The form of water is WATER." << endl; 
+    } else if (temp > 100) { 
+        cout << "The form of water is STEAM." << endl; 
+    } else { 
+        cout << "The temperature is exactly 0 or 100 degrees, so the water is at the phase change point!" << endl; 
+    } 
+}
+
+// Program functions for Topic 3
+void topic3_program1() {
+int options; 
+    cout << "********** MENU **********" << endl; 
+    cout << "Enter 1 --> To Find Largest Number Among Three Variables" << endl; 
+    cout << "Enter 2 --> To Find ODD or EVEN" << endl; 
+    cout << "Enter 3 --> To Find Condition of Water" << endl; 
+    cout << "Enter 4 --> To Find Grade of Student" << endl; 
+    cout << "**************************" << endl; 
+    cout << "Enter your choice: ";
+    cin >> options; 
+    switch (options)  
+{ 
+        case 1: { 
+            int a, b, c; 
+            cout << "Enter three numbers: "; 
+            cin >> a >> b >> c; 
+            if (a > b && a > c) { 
+                cout << "The largest number is: " << a << endl; 
+            } else if (b > a && b > c) { 
+                cout << "The largest number is: " << b << endl; 
+            } else { 
+                cout << "The largest number is: " << c << endl; 
+            } 
+            break; 
+        } 
+        case 2: { 
+            int num; 
+            cout << "Enter an integer: "; 
+            cin >> num; 
+            if (num % 2 == 0) { 
+                cout << "The number " << num << " is EVEN." << endl; 
+            } else { 
+                cout << "The number " << num << " is ODD." << endl; 
+            } 
+            break; 
+        } 
+        case 3: { 
+            float temperature; 
+            cout << "Enter the temperature: "; 
+            cin >> temperature; 
+            if (temperature < 0) { 
+                cout << "The form of water is ICE." << endl; 
+            } else if (temperature > 0 && temperature < 100) { 
+                cout << "The form of water is WATER." << endl; 
+            } else if (temperature > 100) { 
+                cout << "The form of water is STEAM." << endl; 
+            } else { 
+                cout << "The temperature is exactly 0 or 100 degrees, so the water is at the phase change point!" << endl; 
+            }
+            break; 
+        } 
+        case 4:  
+{ 
+            int grade; 
+            cout << "Enter the student's grade: "; 
+            cin >> grade; 
+            if (grade >= 90) { 
+                cout << "Grade: A" << endl; 
+            } else if (grade >= 80) { 
+                cout << "Grade: B" << endl; 
+            } else if (grade >= 70) { 
+                cout << "Grade: C" << endl;
+            } else if (grade >= 60) { 
+                cout << "Grade: D" << endl; 
+            } else { 
+                cout << "Grade: F (Fail)" << endl; 
+            } 
+            break; 
+        } 
+        default: 
+            cout << "Invalid choice. Please enter a number between 1 and 4." << endl; 
+            break; 
+    } 
+}
+
+
+// Program functions for Topic 4
+void topic4_program1() {
+ 
+    int sum = 0; 
+    for (int i = 1; i <= 10; i++)  
+{ 
+        sum += i; 
+    } 
+    cout << "The sum of numbers from 1 to 10 is: " << sum << endl; 
+}
+
+void topic4_program2() {
+    int sum = 0; 
+    int number = 1; 
+    while (number <= 1000)  
+{ 
+        sum = sum + number; 
+        number = number + 1; 
+    } 
+    cout << "The sum of the first 1000 integers starting from 1 is: " << sum << endl; 
+}
+
+void topic4_program3() {
+    int n; 
+    long long factorial = 1; 
+    cout << "Enter a non-negative integer: "; 
+    cin >> n; 
+    if (n < 0)  
+{ 
+        cout << "Factorial is not defined for negative numbers!" << endl; 
+    } else  
+{ 
+        for (int i = 1; i <= n; i++)  
+{ 
+            factorial *= i; 
+        } 
+        cout << "The factorial of " << n << " is: " << factorial << endl; 
+    } 
+}
+
+void topic4_program4() {
+ int num; 
+    int factorial = 1; 
+    cout << "Enter the number for factorial: "; 
+    cin >> num; 
+    if (num < 0)  
+{
+        cout << "Factorial is not defined for negative numbers!" << endl; 
+    }  
+else  
+{ 
+        while (num >= 1)  
+{ 
+            factorial = factorial * num; 
+            num = num - 1; 
+        } 
+        cout << "Factorial is: " << factorial << endl; 
+    }
+}
+
+// Program functions for Topic 5
+void topic5_program1() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+void topic5_program2() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+// Program functions for Topic 6
+void topic6_program1() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+void topic6_program2() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+
+// Program functions for Topic 7
+void topic7_program1() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+void topic7_program2() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+
+// Program functions for Topic 8
+void topic8_program1() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+void topic8_program2() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+// Program functions for Topic 9
+void topic9_program1() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+void topic9_program2() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+
+// Program functions for Topic 10
+void topic10_program1() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+void topic10_program2() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+// Program functions for Topic 11
+void topic11_program1() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+void topic11_program2() {
+cout << "Factorial is not defined for negative numbers!" << endl; 
+}
+
+
+
