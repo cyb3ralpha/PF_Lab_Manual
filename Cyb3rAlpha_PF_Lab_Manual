@@ -74,13 +74,13 @@ int main() {
 void disMenu() {
     cout << CYAN << "\t\t\t\t\t\t Welcome to the Lab Manual" << RESET << endl;
     cout << GREEN << "\t\t\t\t\t\t Name: Abdullah Ismail" << RESET << endl;
-    cout << BLUE << "\t\t\t\t\t\t Roll No: F23-0260" << RESET << endl;
-	cout << GREEN << "\t\t\t\t\t\t Name: Kashan Sajjad Awan" << RESET << endl;
-    cout << BLUE << "\t\t\t\t\t\t Roll No: F23-1555" << RESET << endl;
-    cout << YELLOW << "\t\t\t\t\t\t Section: 'B'" << RESET << endl;
-    cout << BLUE << "\t\t\t\t\t\t Program: Artifical Intelligence " << RESET << endl;
-    cout << YELLOW << "\t\t\t\t\t\t Department: Information Technology" << RESET << endl;
-    cout << GREEN << "\t\t\t\t\t\t Teacher: Mam Javeria Naz" << RESET << endl;
+    cout << BLUE << "\t\t\t\t\t\t Roll No: cyb3ralpha" << RESET << endl;
+	cout << GREEN << "\t\t\t\t\t\t Name: cyb3ralpha" << RESET << endl;
+    cout << BLUE << "\t\t\t\t\t\t Roll No: cyb3ralpha" << RESET << endl;
+    cout << YELLOW << "\t\t\t\t\t\t Section:  cyb3ralpha" << RESET << endl;
+    cout << BLUE << "\t\t\t\t\t\t Program:   cyb3ralpha" << RESET << endl;
+    cout << YELLOW << "\t\t\t\t\t\t Department: cyb3ralpha" << RESET << endl;
+    cout << GREEN << "\t\t\t\t\t\t Teacher: Your Teacher name here" << RESET << endl;
     cout << GREEN << "Select a Lab Maunal: " << RESET << endl;
     cout << MAGENTA <<"1. Lab Manual 1" << endl;
     cout << CYAN << "2. Lab Manual 2" << endl;
